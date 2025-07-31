@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Guesser</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="skript.js"></script>
+    <script src="pokemon.js"></script>
+</head>
+
+<body>
+    <div id="page">
+
+        <div id="header">
+            <h1 id="headline">POKEMON GUESSER</h1>
+        </div>
+
+        <div id="body">
+
+            <div id="left">
+                <img id="sidepictureLeft" src="/img/sidePicture.jfif" alt="pokemonPictureSie">
+            </div>
+
+            <div id="center">
+
+                <div id="topOfCenter">
+                    <div id="answerRightPokemonWrapper">
+                        <div id="answerRightPokemonOrHint"></div>
+                    </div>
+
+                    <div id="guessesAndHintsWrapper">
+                            <div id="guessesLeft">Guesses Left: <p id="guessesLeftNumber">5</p></div>
+                            <div id="hintsTaken">Hints Taken: <p id="hintsTakenNumber">0</p></div>
+                    </div>
+                    
+                </div>      
+
+                <div id="answerBoxes">
+                    <div class="nameForBoxes">
+                        <div class="nameOfBox">Typ 1</div>
+                        <div class = "answerBox" id="box0"></div>
+                    </div>
+
+                    <div class="nameForBoxes">
+                        <div class="nameOfBox">Typ 2</div>
+                        <div class = "answerBox" id="box1"></div>
+                    </div>
+
+                    <div class="nameForBoxes">
+                        <div class="nameOfBox">Evolution</div>
+                        <div class = "answerBox" id="box2"></div>
+                    </div class="nameForBoxes">
+
+                    <div class="nameForBoxes">
+                        <div class="nameOfBox">Generation</div>
+                        <div class = "answerBox" id="box3"></div>
+                    </div>
+
+                    <div class="nameForBoxes">
+                        <div class="nameOfBox">Weight</div>
+                        <div class = "answerBox" id="box4"></div>
+                    </div>
+
+                </div>
+
+                <div id="submitGuess">
+                    <input type="text" id="enterGuess" placeholder="Enter your Guess">
+                    <button id="submitGuessButton" onclick="clearInputField()">Submit</button>
+                </div>
+
+                <div id="bottomCenterWrapper">
+                    <div id="oldGuessesWrapper">
+                        <div id="hintHistory">
+                            <div id="hintHistoryHeader">Hier vorherige Hints gespeichert</div>
+                            <div id="hintHistoryItems"></div>
+                        </div>
+                        <div id="oldGuesses"></div>
+
+                        <div id="buttonFlexCollumn">
+                            <button id="playAgainButton" onclick="location.reload()">Play Again</button>
+                            <button id="hintButton" onclick="addHint()">Take a Hint</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div id="right">
+                <img id="sidepictureRight" src="/img/sidePicture.jfif" alt="pokemonPictureSie">
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+
+</html>
